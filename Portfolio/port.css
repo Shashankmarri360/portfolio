@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background: url('PICS/5652030.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+}
+
+header h1 {
+    color: #1f1e1f; /* Change the color of your name */
+}
+
+header p {
+    color: #666; /* Change the color of the "Web Developer | Designer | Programmer" text */
+}
+.social-media {
+    margin-top: 1rem;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #0077b5; /* LinkedIn blue for LinkedIn icon */
+}
+
+/* Instagram and WhatsApp specific colors on hover */
+.social-media a:nth-child(1):hover {
+    color: #E1306C; /* Instagram pink */
+}
+
+.social-media a:nth-child(2):hover {
+    color: #25D366; /* WhatsApp green */
+}
+nav {
+    background: #827d7d;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    background-color: #827d7d;
+    transition: height 0.5s ease;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    display: inline;
+    margin-right: 10px;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+nav ul li a {
+    color: #616060;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    color: #000000;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #5c5959;
+    background-color: #636161;
+    color: rgb(227, 227, 227); /* Change color on hover */
+}
+
+main {
+    padding: 2rem;
+}
+
+.tab-content {
+    display: none;
+    color: #030303; /* Change the color of the text inside the white boxes */
+}
+
+.tab-content.active {
+    display: block;
+    background: rgba(240, 245, 243, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1s forwards;
+}
+
+.about-container .about-picture {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.about-container p {
+    animation: slideIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.education-details {
+    margin-bottom: 2rem;
+}
+.education-details h3 {
+    margin-bottom: 0.5rem;
+}
+.education-details p {
+    margin-bottom: 0.5rem;
+}
+.education-info {
+    display: none;
+}
+
+.education-info.active {
+    display: block;
+    margin-top: 1rem;
+}
+/* Keyframe animation for education details */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional styling for education details */
+.education-details {
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.education-title {
+    cursor: pointer;
+    color: rgb(65, 65, 84);
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project img {
+    width: 50%;
+    border-radius: 8px;
+}
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background: #881ccf;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+}
+.education-details,
+.project{
+    color: #7e1b1b; /* Change to desired color */
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(127, 125, 125, 0.9);
+}
+
+.tab-content h2 {
+    color: #444; /* Change the color of the headers inside the white boxes */
+}
+
+.tab-content p,
+.tab-content ul li {
+    color: #555; /* Change the color of the paragraphs and list items inside the white boxes */
+}
